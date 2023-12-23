@@ -1,4 +1,4 @@
-FROM python:3.12.0
+FROM python:3.9-alpine3.13
 LABEL maintainer="moealm"
 
 ENV PYTHONUNBUFFERED 1
@@ -29,9 +29,6 @@ RUN python -m venv /py && \
 # Set the working directory and expose port
 WORKDIR /app
 EXPOSE 8000
-
-# Add the application code
-COPY app /app
 
 # Set the PATH to include the virtual environment
 ENV PATH="/py/bin:$PATH"
