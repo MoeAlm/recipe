@@ -57,9 +57,9 @@ class ModelsTest(TestCase):
         )
         recipe = models.Recipe.objects.create(
             user=user,
-            title='Sample Recipe Name',
+            title='Sample recipe name',
             time_minutes=5,
             price=Decimal('5.50'),
-            description='Sample Description'
-        ),
+            description='Sample description',
+        )
         self.assertEqual(str(recipe), recipe.title)
